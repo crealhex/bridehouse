@@ -1,0 +1,27 @@
+$firstColor: #2A2A2A;
+$secondColor: #F7F7F7;
+$accentColor: #A57D35;
+$darkColor: #313131;
+$bodyBG: #FDFDFD;
+$borderColor: #CFCFCF;
+$cleanColor: #FDFDFD;
+$textColor: #2A2A2A;
+
+:root {
+  --header-height: 3rem;
+  --max-width: 1344px;
+  --gutter: 1rem;
+  --first-color: #2A2A2A;
+  --second-color: #F7F7F7;
+  --accent-color: #A57D35;
+  --dark-color: #313131;
+  --body-bg: #FDFDFD;
+  --border-color: #CFCFCF;
+  --clean-color: #FDFDFD;
+  --text-color: #2A2A2A;
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}

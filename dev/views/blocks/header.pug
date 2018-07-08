@@ -1,0 +1,22 @@
+.header-container
+  .row-one
+    .header__data.nd-container
+      nav.main-menu
+        append config
+          -pages = {'search':'Buscar', '/':'/', 'help':'Ayuda'}
+          include ../blocks/menu
+    .header__data.nd-container
+      nav.main-menu
+        append config
+          -pages = {'login':'Ingresar', 'cart':'Mi carrito'}
+          include ../blocks/menu
+  .row-two
+    .header__img.nd-container
+      a(href="index" + fileSuffix)
+        img(src="https://www.pngarts.com/files/1/Netflix-Logo-Free-PNG-Image.png").logo
+  .row-three
+    .header__data.nd-container
+      nav.main-menu
+        append config
+          -pages = {'index':'Inicio', 'profile':'Perfil', 'shop':'Tienda', 'designs':'Diseños', 'designers':'Diseñadores', 'blog':'Blog'}
+          include ../blocks/menu

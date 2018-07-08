@@ -1,0 +1,55 @@
+extends templates/template
+append config
+  -banner = true
+
+block main
+  h2 Los más recientes
+  //p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae laboriosam magnam molestias nulla perferendis, placeat rerum suscipit velit? Aspernatur, debitis deserunt? Aperiam iure nemo nostrum, quia quis soluta veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ipsa iusto reiciendis. Alias amet delectus eius eos labore neque nesciunt recusandae reiciendis suscipit. Aliquid, eius laborum nam nihil recusandae ullam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolorum enim impedit voluptates voluptatibus. Ab commodi cumque, delectus dicta dignissimos dolor ea eaque est eum maiores nemo, quaerat temporibus, voluptate?
+
+append repairs
+  script(src="js/owl.carousel.min.js")
+  script(type="text/javascript").
+      $(document).ready(function () {
+          $('.owl-one').owlCarousel({
+              loop: true,
+              nav: false,
+              dots: true,
+              autoplay: true,
+              autoplayTimeout: 3500,
+              smartSpeed: 600,
+              autoplayHoverPause: true,
+              // animateIn: 'slideInDown',
+              // animateOut: 'slideOutDown',
+              responsive: {
+                  0: {
+                      items: 1
+                  },
+                  600: {
+                      items: 1
+                  },
+                  1000: {
+                      items: 1
+                  }
+              }
+          });
+
+          $('.owl-products').owlCarousel({
+              loop: true,
+              nav: true,
+              dots: false,
+              autoplay: true,
+              autoplayTimeout: 3500,
+              autoplayHoverPause: true,
+              responsive: {
+                  0: {
+                      items: 1
+                  },
+                  600: {
+                      items: 3
+                  },
+                  1000: {
+                      items: 6
+                  }
+              }
+          });
+      });

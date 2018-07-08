@@ -1,0 +1,41 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--body-bg);
+  min-height: 100vh;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.col-15 {
+  width: 15%;
+}
+
+.col-85 {
+  width: 85%;
+}
+
+.col-100 {
+  width: 100%;
+}
+
+.nd-container {
+  max-width: 1344px;
+  margin: 0 auto;
+}

@@ -1,0 +1,6 @@
+ul
+  each value, index in pages
+    if value === '/'
+      li #{value}
+    else
+      li: a(href=index + fileSuffix) #{value}
