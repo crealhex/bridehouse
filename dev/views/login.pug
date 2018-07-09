@@ -1,1 +1,17 @@
 extends templates/template
+append config
+  -header = false
+  -footer = false
+
+block main
+  .main-container.col-100
+    section
+      h2 Iniciar sesión
+      form.main-form(action="account" + fileSuffix method="get")
+        label: input(name="username" placeholder="Nombre de usuario o correo" required)
+        label: input(name="password" type="password" placeholder="Contraseña" required)
+        .two-items
+          button.button--ghost(type="submit") Ingresar
+          a.button--ghost(href="index" + fileSuffix) Cancelar
+        p ¿No tienes una cuenta? Regístrate
+          a(href="signup" + fileSuffix): u  aquí

@@ -1,9 +1,10 @@
-$firstColor: #2A2A2A;
+$firstColor: #222;
 $secondColor: #F7F7F7;
 $accentColor: #A57D35;
 $darkColor: #313131;
 $bodyBG: #FDFDFD;
-$borderColor: #CFCFCF;
+//$borderColor: #CFCFCF;
+$borderColor: #CCC;
 $cleanColor: #FDFDFD;
 $textColor: #2A2A2A;
 
@@ -11,12 +12,12 @@ $textColor: #2A2A2A;
   --header-height: 3rem;
   --max-width: 1344px;
   --gutter: 1rem;
-  --first-color: #2A2A2A;
+  --first-color: #222;
   --second-color: #F7F7F7;
   --accent-color: #A57D35;
   --dark-color: #313131;
   --body-bg: #FDFDFD;
-  --border-color: #CFCFCF;
+  --border-color: #CCC;
   --clean-color: #FDFDFD;
   --text-color: #2A2A2A;
   --z-back: -10;

@@ -1,7 +1,7 @@
 .main-footer,
 .main-footer a {
   font-size: .875rem;
-  color: #ccc;
+  color: var(--border-color);
   font-weight: 300;
 }
 
@@ -48,7 +48,8 @@
   background-color: var(--dark-color);
   height: 2.5rem;
   border-radius: 3px;
-  border: 2px solid #ccc;
+  border: 2px solid var(--border-color);
+  font-weight: 300;
 }
 
 .socials li {

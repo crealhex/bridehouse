@@ -1,1 +1,13 @@
 extends templates/template
+
+block main
+  .main-container.col-100
+    section
+      h2 Productos en oferta
+      .products.d-grid
+        block card
+          include blocks/card
+          -var card = 680
+          while card < 690
+            +card(card, 500, 500, true, 'Product model', 321, 'Product brand')
+            -card++

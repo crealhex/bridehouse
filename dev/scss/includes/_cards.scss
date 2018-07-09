@@ -1,0 +1,38 @@
+.card-container {
+  margin-bottom: 25px;
+}
+
+.card-container.no-margin {
+  margin: 0;
+}
+
+.card__img img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.card__data h3 {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.card__data .row-one {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__data.alter .row-one {
+  display: block;
+}
+
+.card__data.alter .price {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.card__data.alter {
+  text-align: center;
+}

@@ -1,0 +1,45 @@
+.self.col-two {
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+}
+
+.self.col-two h2,
+.self.col-two .price {
+  margin-bottom: 25px;
+}
+
+.self.col-two .quantity {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.self.col-two .quantity input {
+  text-align: center;
+  margin-left: 15px;
+  width: 100px;
+}
+
+.self.col-two button {
+  margin-top: 25px;
+}
+
+.self.col-two .details {
+  text-align: left;
+  margin-top: 50px;
+  font-size: .875rem;
+  line-height: 1.6;
+}
+
+.self .details p:first-child {
+  font-size: 1.2rem;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.self .details p:nth-child(2) {
+  //font-size: 1.2rem;
+  text-align: justify;
+  padding-top: 25px;
+  //border-bottom: 1px solid var(--border-color);
+}

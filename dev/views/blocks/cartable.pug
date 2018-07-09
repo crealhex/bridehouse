@@ -1,0 +1,32 @@
+mixin row(min, max)
+  #page
+    table#cart
+      thead
+        tr
+          th.first Imagen
+          th.second Cantidad
+          th.third Producto
+          th.fourth Line total
+          th.fifth
+      tbody
+        -var row = min
+        while row < max
+          tr.productitm
+            td: img.thumb(src="//picsum.photos/100/100/?image=" + row)
+            td: input.qtyinput(type="number" name="quantity" min="1")
+            td Product name
+            td S/79.00
+            td: a.remove(href="#") Remover
+          -row++
+        tr.extracosts
+          td.light Envío &amp; Taxi
+          td.light(colspan="2")
+          td S/35
+          td
+        tr.totalprice
+          td.light Total
+          td(colspan="2")
+          td: span.thick S/225
+          td
+        tr.checkoutrow
+          td.checkout(colspan="5"): button.button--ghost Realizar pedido

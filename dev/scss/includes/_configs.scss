@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
   outline: none;
   font-family: 'Poppins', sans-serif;
 }
@@ -11,6 +12,9 @@
 body {
   background-color: var(--body-bg);
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 ol,
@@ -27,6 +31,10 @@ a {
   width: 15%;
 }
 
+.col-50 {
+  width: 50%;
+}
+
 .col-85 {
   width: 85%;
 }
@@ -38,4 +46,19 @@ a {
 .nd-container {
   max-width: 1344px;
   margin: 0 auto;
+}
+
+.main-container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.aside-container {
+  margin-bottom: 100px;
+}
+
+.price {
+  color: var(--accent-color);
+  font-weight: 600;
+  letter-spacing: 1px;
 }

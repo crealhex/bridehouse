@@ -1,0 +1,38 @@
+.main-form {
+  font-size: .755rem;
+  margin: 25px auto;
+  padding: 25px;
+  border: 1px solid var(--border-color);
+  min-width: 300px;
+  //border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.main-form > label input{
+  line-height: initial;
+  width: 100%;
+  margin-bottom: 25px;
+  font-weight: 300;
+  border-radius: 3px;
+  padding: 8px 15px;
+  border: 1px solid var(--border-color);
+}
+
+.main-form .two-items {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.main-form .two-items button {
+  flex-grow: 1;
+  margin-right: 5px;
+  font-size: .755rem;
+}
+
+.main-form .two-items a {
+  margin-left: 5px;
+  font-size: .755rem;
+  flex-grow: 1;
+}

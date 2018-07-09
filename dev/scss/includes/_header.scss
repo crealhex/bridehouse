@@ -1,11 +1,4 @@
 .main-header {
-  //text-transform: uppercase;
-  //font-weight: 600;
-  //font-size: .875rem;
-}
-
-.main-header .row-one,
-.main-header .row-two {
   background-color: var(--first-color);
   color: var(--clean-color);
 }
@@ -16,12 +9,6 @@
 
 .main-header ul {
   padding-top: 15px;
-}
-
-.main-header li {
-  //padding-right: 20px;
-  //padding-left: 15px;
-  //padding-right: 15px;
 }
 
 // FIRST ROW ---------------
@@ -37,11 +24,12 @@
 
 .main-header .row-one li {
   padding-right: 15px;
-  color: #999;
+  color: var(--border-color);
+  font-size: .875rem;
 }
 
 .main-header .row-one a {
-  color: #999;
+  color: var(--border-color);
 }
 
 // SECOND ROW --------------

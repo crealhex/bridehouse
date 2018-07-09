@@ -1,1 +1,9 @@
 extends templates/template
+
+block main
+  .main-container.col-100
+    section
+      h2 Mi carrito
+      block cartable
+        include blocks/cartable
+        +row(10, 20)

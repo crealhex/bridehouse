@@ -1,0 +1,70 @@
+extends templates/template
+append config
+  -aside = true
+
+block main
+  .main-container.col-100
+    section.d-flex
+      .self.col-one.col-50
+        .self__img
+          img#img_01(src="//picsum.photos/672/604/?image=74" data-zoom-image="//picsum.photos/2000/2000/?image=74")
+        #self-gallery
+          -var selfie = 74
+          while selfie < 79
+            a(href="#" data-image="//picsum.photos/672/604/?image=" + selfie data-zoom-image="//picsum.photos/2000/2000/?image=" + selfie)
+              img(src="//picsum.photos/100/100/?image=" + selfie)
+            -selfie++
+      .self.col-two.col-50
+        h1 Product name
+        p.price S/399
+        form(action="cart" + fileSuffix method="get")
+          input(type="hidden" name="price" value="399")
+          //label: select(name="size")
+          //  option(selected) Talla
+          //  option(value="xl") XL
+          //  option(value="large") LARGE
+          //  option(value="xxl") XXL
+          //  option(value="small") SMALL
+          label.quantity Cantidad
+            input(type="number" min="1" name="quantity" value="1")
+          //label Color
+          //  input(type="radio" name="color")
+          //  input(type="radio" name="color")
+          //  input(type="radio" name="color")
+          button.button--ghost(type="submit") Agregar al carrito
+        .details
+          p Detalles del producto
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolores, doloribus ducimus ea error eum ex hic in magni minus, mollitia nemo placeat quae recusandae totam veritatis voluptatibus! Dolorem, optio! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aspernatur doloribus dolorum, eius, eligendi enim hic incidunt itaque labore minus, molestias quae quam quidem sed tempora tempore vero. Magni, veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequuntur cum cupiditate delectus dolore dolorum esse eveniet incidunt labore, natus perferendis provident quas recusandae saepe sed sequi unde ut veniam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores consectetur corporis debitis dicta dolores in laborum magnam soluta, voluptatibus.
+
+block aside
+  .aside-container
+    section
+      h2 Productos recomendados
+      .products.d-grid.gallery
+        block card
+          include blocks/card
+          +card(234, 431, 888, false, 'Product model', 512)(class="no-margin")
+          -var card = 322
+          while card < 326
+            +card(card, 500, 500, false, 'Product model', 512)(class="no-margin")
+            -card++
+
+append repairs
+  script(src="js/jquery.elevateZoom-3.0.8.min.js")
+  script(type="text/javascript").
+      const galery = $("#img_01");
+
+      galery.elevateZoom({
+          zoomType: 'inner',
+          gallery: 'self-gallery',
+          cursor: 'crosshair',
+          galleryActiveClass: 'active',
+          imageCrossfade: true,
+          loadingIcon: 'http://www.elevateweb.co.uk/spinner.gif'
+      });
+
+      galery.bind("click", function (e) {
+          let ez = $('#img_01').data('elevateZoom');
+          $.fancybox(ez.getGalleryList());
+          return false;
+      });

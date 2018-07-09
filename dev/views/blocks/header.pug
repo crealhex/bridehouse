@@ -1,11 +1,11 @@
 .header-container
-  .row-one
-    .header__data.nd-container
+  .row-one.nd-container
+    .header__data
       nav.main-menu
         append config
           -pages = {'search':'Buscar', '/':'/', 'help':'Ayuda'}
           include ../blocks/menu
-    .header__data.nd-container
+    .header__data
       nav.main-menu
         append config
           -pages = {'login':'Ingresar', 'cart':'Mi carrito'}

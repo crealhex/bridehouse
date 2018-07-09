@@ -1,0 +1,22 @@
+mixin card(img_num, witdh, height, data, model, price, brand)
+  article.card-container&attributes(attributes)
+    .card__img
+      a(href="product" + fileSuffix)
+        img(src="//picsum.photos/" + witdh + "/" + height + "/?image=" + img_num)
+    if data
+      if brand
+        .card__data
+          .row-one
+            a(href="product" + fileSuffix)
+              h3= model
+            p.price= 'S/' + price
+          .row-two
+            p= brand
+      else
+        .card__data.alter
+          .row-one
+            a(href="product" + fileSuffix)
+              h3= model
+            p.price= 'S/' + price
+          .row-two
+            a(href="product" + fileSuffix).button--ghost Más información

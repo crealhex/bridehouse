@@ -1,0 +1,115 @@
+#w {
+  display: block;
+  width: 600px;
+  margin: 0 auto;
+}
+
+#title {
+  display: block;
+  width: 100%;
+  background: #95a6d6;
+  padding: 10px 0;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+#page {
+  display: block;
+  margin-top: 50px;
+  //padding: 15px 0;
+}
+
+#cart {
+  padding: 25px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  display: block;
+  border-collapse: collapse;
+  margin: 0;
+  width: 100%;
+  font-size: .875rem;
+}
+#cart thead th {
+  padding: 8px 0;
+  font-weight: bold;
+}
+
+#cart thead th.first {
+  width: 175px;
+}
+#cart thead th.second {
+  width: 100px;
+}
+#cart thead th.third {
+  width: 230px;
+}
+#cart thead th.fourth {
+  width: 130px;
+}
+#cart thead th.fifth {
+  width: 100px;
+}
+
+#cart tbody td {
+  text-align: center;
+  margin-top: 4px;
+}
+
+tr.productitm {
+  height: 65px;
+  line-height: 65px;
+  border-bottom: 1px solid #d7dbe0;
+}
+
+
+#cart tbody td img.thumb {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
+  vertical-align: bottom;
+  border: 1px solid var(--border-color);
+}
+
+.qtyinput {
+  width: 75px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+}
+
+tr.totalprice, tr.extracosts {
+  height: 35px;
+  line-height: 35px;
+}
+tr.extracosts {
+  background: var(--second-color);
+}
+
+.remove {
+  cursor: pointer;
+}
+
+
+.light {
+  color: #888b8d;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.45);
+  font-weight: normal;
+}
+
+.thick {
+  color: #272727;
+  font-weight: bold;
+}
+
+tr.checkoutrow {
+  background: var(--second-color);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+td.checkout {
+  padding: 20px 0;
+  width: 100%;
+  text-align: right;
+}

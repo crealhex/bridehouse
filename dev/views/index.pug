@@ -1,10 +1,31 @@
 extends templates/template
 append config
   -banner = true
+  -aside = true
 
 block main
-  h2 Los más recientes
-  //p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae laboriosam magnam molestias nulla perferendis, placeat rerum suscipit velit? Aspernatur, debitis deserunt? Aperiam iure nemo nostrum, quia quis soluta veritatis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ipsa iusto reiciendis. Alias amet delectus eius eos labore neque nesciunt recusandae reiciendis suscipit. Aliquid, eius laborum nam nihil recusandae ullam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolorum enim impedit voluptates voluptatibus. Ab commodi cumque, delectus dicta dignissimos dolor ea eaque est eum maiores nemo, quaerat temporibus, voluptate?
+  .main-container.col-100
+    section
+      h2 Productos más recientes
+      .products.d-grid
+        block card
+          include blocks/card
+          -var card = 324
+          while card < 329
+            +card(card, 500, 500, true, 'Product model', 321, 'Product brand')
+            -card++
+
+block aside
+  .aside-container
+    section
+      h2 Productos destacados
+      .products.d-grid
+        block card
+          include blocks/card
+          -var card2 = 215
+          while card2 < 218
+            +card(card2, 500, 650, true, 'Product model', 512)
+            -card2++
 
 append repairs
   script(src="js/owl.carousel.min.js")
