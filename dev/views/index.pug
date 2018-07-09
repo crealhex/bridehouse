@@ -11,7 +11,7 @@ block main
         block card
           include blocks/card
           -var card = 324
-          while card < 329
+          while card < 330
             +card(card, 500, 500, true, 'Product model', 321, 'Product brand')
             -card++
 
@@ -22,10 +22,10 @@ block aside
       .products.d-grid
         block card
           include blocks/card
-          -var card2 = 215
-          while card2 < 218
-            +card(card2, 500, 650, true, 'Product model', 512)
-            -card2++
+          -var card = 215
+          while card < 218
+            +card(card, 500, 650, true, 'Product model', 512)
+            -card++
 
 append repairs
   script(src="js/owl.carousel.min.js")
