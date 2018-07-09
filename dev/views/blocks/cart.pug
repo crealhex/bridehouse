@@ -1,4 +1,4 @@
-mixin row(min, max)
+mixin cart(min, max)
   #page
     table#cart
       thead
@@ -29,4 +29,4 @@ mixin row(min, max)
           td: span.thick S/225
           td
         tr.checkoutrow
-          td.checkout(colspan="5"): button.button--ghost Realizar pedido
+          td.checkout(colspan="5"): a(href=fileName[6] + fileSuffix).button--ghost Realizar pedido

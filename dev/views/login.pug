@@ -12,6 +12,6 @@ block main
         label: input(name="password" type="password" placeholder="Contraseña" required)
         .two-items
           button.button--ghost(type="submit") Ingresar
-          a.button--ghost(href="index" + fileSuffix) Cancelar
+          a.button--ghost(href=fileName[0] + fileSuffix) Cancelar
         p ¿No tienes una cuenta? Regístrate
-          a(href="signup" + fileSuffix): u  aquí
+          a(href=fileName[6] + fileSuffix): u  aquí

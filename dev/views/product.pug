@@ -17,7 +17,7 @@ block main
       .self.col-two.col-50
         h1 Product name
         p.price S/399
-        form(action="cart" + fileSuffix method="get")
+        form(action=fileName[2] + fileSuffix method="get")
           input(type="hidden" name="price" value="399")
           //label: select(name="size")
           //  option(selected) Talla

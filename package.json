@@ -1,0 +1,36 @@
+{
+  "name": "bridehouse",
+  "version": "1.0.0",
+  "description": "Tienda online de utilidades para bodas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crealhex/bridehouse.git"
+  },
+  "keywords": [
+    "bridehouse"
+  ],
+  "author": "'Enco Alvarado Luis Abraham'",
+  "contributors": [
+    {
+      "name": "Olinda Sanchez Diez",
+      "email": "olinda@gmail.com",
+      "url": "https://www.facebook.com/Olinda14.Sanchez"
+    }
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crealhex/bridehouse/issues"
+  },
+  "homepage": "https://github.com/crealhex/bridehouse#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.1"
+  }
+}
