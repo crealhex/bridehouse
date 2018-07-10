@@ -1,0 +1,1071 @@
+:root {
+  --header-height: 3rem;
+  --max-width: 1344px;
+  --gutter: 1rem;
+  --first-color: #222;
+  --second-color: #F7F7F7;
+  --accent-color: #A57D35;
+  --dark-color: #313131;
+  --body-bg: #FDFDFD;
+  --border-color: #CCC;
+  --clean-color: #FDFDFD;
+  --text-color: #2A2A2A;
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+/**
+ * Owl Carousel v2.3.4
+ * Copyright 2013-2018 David Deutsch
+ * Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+ */
+/*
+ *  Owl Carousel - Core
+ */
+.owl-carousel {
+  display: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  /* position relative and z-index fix webkit rendering fonts issue */
+  position: relative;
+  z-index: 1;
+}
+
+.owl-carousel .owl-stage {
+  position: relative;
+  touch-action: manipulation;
+  -moz-backface-visibility: hidden;
+  /* fix firefox animation glitch */
+}
+
+.owl-carousel .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.owl-carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+  /* fix for flashing background */
+  -webkit-transform: translate3d(0px, 0px, 0px);
+}
+
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+}
+
+.owl-carousel .owl-item {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+.owl-carousel .owl-item img {
+  display: block;
+  width: 100%;
+}
+
+.owl-carousel .owl-nav.disabled,
+.owl-carousel .owl-dots.disabled {
+  display: none;
+}
+
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next,
+.owl-carousel .owl-dot {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.owl-carousel.owl-loaded {
+  display: block;
+}
+
+.owl-carousel.owl-loading {
+  opacity: 0;
+  display: block;
+}
+
+.owl-carousel.owl-hidden {
+  opacity: 0;
+}
+
+.owl-carousel.owl-refresh .owl-item {
+  visibility: hidden;
+}
+
+.owl-carousel.owl-drag .owl-item {
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.owl-carousel.owl-grab {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.owl-carousel.owl-rtl {
+  direction: rtl;
+}
+
+.owl-carousel.owl-rtl .owl-item {
+  float: right;
+}
+
+/* No Js */
+.no-js .owl-carousel {
+  display: block;
+}
+
+/*
+ *  Owl Carousel - Animate Plugin
+ */
+.owl-carousel .animated {
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in {
+  z-index: 0;
+}
+
+.owl-carousel .owl-animated-out {
+  z-index: 1;
+}
+
+.owl-carousel .fadeOut {
+  -webkit-animation-name: fadeOut;
+          animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*
+ * 	Owl Carousel - Auto Height Plugin
+ */
+.owl-height {
+  transition: height 500ms ease-in-out;
+}
+
+/*
+ * 	Owl Carousel - Lazy Load Plugin
+ */
+.owl-carousel .owl-item {
+  /**
+			This is introduced due to a bug in IE11 where lazy loading combined with autoheight plugin causes a wrong
+			calculation of the height of the owl-item that breaks page layouts
+		 */
+}
+
+.owl-carousel .owl-item .owl-lazy {
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-item .owl-lazy[src^=""], .owl-carousel .owl-item .owl-lazy:not([src]) {
+  max-height: 0;
+}
+
+.owl-carousel .owl-item img.owl-lazy {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+/*
+ * 	Owl Carousel - Video Plugin
+ */
+.owl-carousel .owl-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000;
+}
+
+.owl-carousel .owl-video-play-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: url("owl.video.play.png") no-repeat;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  transition: -webkit-transform 100ms ease;
+  transition: transform 100ms ease;
+  transition: transform 100ms ease, -webkit-transform 100ms ease;
+}
+
+.owl-carousel .owl-video-play-icon:hover {
+  -webkit-transform: scale(1.3, 1.3);
+          transform: scale(1.3, 1.3);
+}
+
+.owl-carousel .owl-video-playing .owl-video-tn,
+.owl-carousel .owl-video-playing .owl-video-play-icon {
+  display: none;
+}
+
+.owl-carousel .owl-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: opacity 400ms ease;
+}
+
+.owl-carousel .owl-video-frame {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+
+.owl-theme .owl-nav {
+  position: absolute;
+  top: -56px;
+  width: 100%;
+  margin: auto;
+  height: 54px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.owl-theme .owl-nav button {
+  width: 25px;
+  height: 25px;
+  font-size: 0;
+  border: none;
+  background: none;
+  position: absolute;
+  outline: none;
+  color: var(--border-color);
+  transition: all .2s ease;
+  z-index: 10;
+}
+
+.owl-theme .owl-nav button:first-child {
+  right: 25px;
+}
+
+.owl-theme .owl-nav button:first-child:before,
+.owl-theme .owl-nav button:last-child:before {
+  content: "\f104";
+  display: block;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  font-weight: 900;
+  font-family: 'Font Awesome', sans-serif;
+  font-size: 24px;
+  text-align: center;
+  margin-left: -2px;
+  margin-top: -1px;
+}
+
+.owl-theme .owl-nav button:last-child:before {
+  content: "\f105";
+  margin-left: 0;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover {
+  color: var(--dark-color);
+}
+
+.owl-theme .owl-nav .disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.owl-theme .owl-nav.disabled + .owl-dots {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.owl-theme .owl-dots {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 10;
+}
+
+.owl-theme .owl-dots button {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #FFF;
+  background: none;
+  margin: 0 2px;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin-bottom: 2px;
+  background: none;
+  -webkit-backface-visibility: visible;
+  transition: opacity 200ms ease;
+  border-radius: 50%;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #FFF;
+}
+
+@font-face {
+  font-family: "Font Awesome";
+  font-style: normal;
+  font-weight: 900;
+  src: url(../fonts/libraries/fa-solid-900.eot);
+  src: url(../fonts/libraries/fa-solid-900.eot?#iefix) format("embedded-opentype"), url(../fonts/libraries/fa-solid-900.woff2) format("woff2"), url(../fonts/libraries/fa-solid-900.woff) format("woff"), url(../fonts/libraries/fa-solid-900.ttf) format("truetype"), url(../fonts/libraries/fa-solid-900.svg#fontawesome) format("svg");
+}
+
+@font-face {
+  font-family: "Grota Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/web-page/Grota-Sans-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Grota Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(../fonts/web-page/Grota-Sans-Semi-Bold.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Grota Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/web-page/Grota-Sans-Bold.woff) format("woff");
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--body-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.col-15 {
+  width: 15%;
+}
+
+.col-50 {
+  width: 50%;
+}
+
+.col-85 {
+  width: 85%;
+}
+
+.col-100 {
+  width: 100%;
+}
+
+.nd-container {
+  max-width: 1344px;
+  margin: 0 auto;
+}
+
+.main-container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.aside-container {
+  margin-bottom: 100px;
+}
+
+.price {
+  color: var(--accent-color);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+[class^="button"],
+.button {
+  display: inline-block;
+  font-size: .875rem;
+  padding: 10px 8px;
+  transition: all .1s ease-out;
+  background: none;
+  cursor: pointer;
+}
+
+[class*="--ghost"] {
+  border-radius: 3px;
+  border: 2px solid var(--first-color);
+}
+
+[class*="--ghost"]:hover {
+  background-color: var(--first-color);
+  color: var(--clean-color);
+}
+
+.main-header {
+  background-color: var(--first-color);
+  color: var(--clean-color);
+}
+
+.main-header nav li {
+  display: inline-block;
+}
+
+.main-header ul {
+  padding-top: 15px;
+}
+
+.main-header .row-one {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.main-header .row-one ul li:last-child {
+  padding-right: 0;
+}
+
+.main-header .row-one li {
+  padding-right: 15px;
+  color: var(--border-color);
+  font-size: .875rem;
+}
+
+.main-header .row-one a {
+  color: var(--border-color);
+}
+
+.main-header .header__img {
+  padding-top: 25px;
+  padding-bottom: 75px;
+  text-align: center;
+}
+
+.main-header .row-two img {
+  height: 50px;
+}
+
+.main-header .row-three ul {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  margin: 0 auto;
+  max-width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-header .row-three {
+  background-color: var(--second-color);
+}
+
+.main-header .row-three ul {
+  text-align: center;
+}
+
+.main-header .row-three a:hover {
+  border-bottom: 5px solid var(--first-color);
+}
+
+.d-grid {
+  display: grid;
+  grid-gap: 25px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.nd-container section h2,
+.nd-container section h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.nd-container section h2::after,
+.nd-container section h1::after {
+  content: '';
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 50px;
+  height: 5px;
+  background-color: var(--accent-color);
+}
+
+.products {
+  margin-top: 50px;
+}
+
+.products.d-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery article:first-child {
+  grid-row: 1 / span 2;
+}
+
+.card-container {
+  margin-bottom: 25px;
+}
+
+.card-container.no-margin {
+  margin: 0;
+}
+
+.card__img img {
+  max-width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card__data h3 {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.card__data .row-one {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__data.alter .row-one {
+  display: block;
+}
+
+.card__data.alter .price {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.card__data.alter {
+  text-align: center;
+}
+
+/*set a border on the images to prevent shifting*/
+#self-gallery img {
+  margin-top: 5px;
+  border: 2px solid transparent;
+}
+
+/*Change the colour*/
+#self-gallery .active img {
+  border: 2px solid #333 !important;
+}
+
+#w {
+  display: block;
+  width: 600px;
+  margin: 0 auto;
+}
+
+#title {
+  display: block;
+  width: 100%;
+  background: #95a6d6;
+  padding: 10px 0;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+#page {
+  display: block;
+  margin-top: 50px;
+}
+
+#cart {
+  padding: 25px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  display: block;
+  border-collapse: collapse;
+  margin: 0;
+  width: 100%;
+  font-size: .875rem;
+}
+
+#cart thead th {
+  padding: 8px 0;
+  font-weight: bold;
+}
+
+#cart thead th.first {
+  width: 175px;
+}
+
+#cart thead th.second {
+  width: 100px;
+}
+
+#cart thead th.third {
+  width: 230px;
+}
+
+#cart thead th.fourth {
+  width: 130px;
+}
+
+#cart thead th.fifth {
+  width: 100px;
+}
+
+#cart tbody td {
+  text-align: center;
+  margin-top: 4px;
+}
+
+tr.productitm {
+  height: 65px;
+  line-height: 65px;
+  border-bottom: 1px solid #d7dbe0;
+}
+
+#cart tbody td img.thumb {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
+  vertical-align: bottom;
+  border: 1px solid var(--border-color);
+}
+
+.qtyinput {
+  width: 75px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+}
+
+tr.totalprice, tr.extracosts {
+  height: 35px;
+  line-height: 35px;
+}
+
+tr.extracosts {
+  background: var(--second-color);
+}
+
+.remove {
+  cursor: pointer;
+}
+
+.light {
+  color: #888b8d;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.45);
+  font-weight: normal;
+}
+
+.thick {
+  color: #272727;
+  font-weight: bold;
+}
+
+tr.checkoutrow {
+  background: var(--second-color);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+td.checkout {
+  padding: 20px 0;
+  width: 100%;
+  text-align: right;
+}
+
+.main-form {
+  font-size: .755rem;
+  margin: 25px auto;
+  padding: 25px;
+  border: 1px solid var(--border-color);
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.main-form > label input {
+  line-height: initial;
+  width: 100%;
+  margin-bottom: 25px;
+  font-weight: 300;
+  border-radius: 3px;
+  padding: 8px 15px;
+  border: 1px solid var(--border-color);
+}
+
+.main-form .two-items {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.main-form .two-items button {
+  flex-grow: 1;
+  margin-right: 5px;
+  font-size: .755rem;
+}
+
+.main-form .two-items a {
+  margin-left: 5px;
+  font-size: .755rem;
+  flex-grow: 1;
+}
+
+.self.col-two {
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+}
+
+.self.col-two h2,
+.self.col-two .price {
+  margin-bottom: 25px;
+}
+
+.self.col-two .quantity {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.self.col-two .quantity input {
+  text-align: center;
+  margin-left: 15px;
+  width: 100px;
+}
+
+.self.col-two button {
+  margin-top: 25px;
+}
+
+.self.col-two .details {
+  text-align: left;
+  margin-top: 50px;
+  font-size: .875rem;
+  line-height: 1.6;
+}
+
+.self .details p:first-child {
+  font-size: 1.2rem;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.self .details p:nth-child(2) {
+  text-align: justify;
+  padding-top: 25px;
+}
+
+.main-footer,
+.main-footer a {
+  font-size: .875rem;
+  color: var(--border-color);
+  font-weight: 300;
+}
+
+.main-footer h4 {
+  text-transform: uppercase;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.main-footer {
+  line-height: 1.9;
+  background-color: var(--dark-color);
+}
+
+.main-footer .row-one {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-footer .row-two {
+  background-color: var(--first-color);
+}
+
+.main-footer .row-one {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.main-footer .row-two {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.row-one .footer__data:nth-child(2) {
+  width: 300px;
+}
+
+.main-footer input {
+  color: var(--clean-color);
+  margin-top: 15px;
+  padding: 0 10px;
+  width: 100%;
+  background-color: var(--dark-color);
+  height: 2.5rem;
+  border-radius: 3px;
+  border: 2px solid var(--border-color);
+  font-weight: 300;
+}
+
+.socials li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.socials a {
+  font-size: 1.5rem;
+}
