@@ -274,5 +274,24 @@
           });
       });
     </script>
+    <script src="js/jquery.elevateZoom-3.0.8.min.js"></script>
+    <script type="text/javascript">
+      const galery = $("#img_01");
+      
+      galery.elevateZoom({
+          zoomType: 'inner',
+          gallery: 'self-gallery',
+          cursor: 'crosshair',
+          galleryActiveClass: 'active',
+          imageCrossfade: true,
+          loadingIcon: 'http://www.elevateweb.co.uk/spinner.gif'
+      });
+      
+      galery.bind("click", function (e) {
+          let ez = $('#img_01').data('elevateZoom');
+          $.fancybox(ez.getGalleryList());
+          return false;
+      });
+    </script>
   </body>
 </html>

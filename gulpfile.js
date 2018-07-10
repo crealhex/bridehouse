@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-var browserSync = require('browser-sync').create();
+const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const pug = require('gulp-pug');

@@ -34,5 +34,71 @@
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/jquery.nicescroll.min.js"></script>
     <script src="js/config-nscroll.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+          $('.owl-one').owlCarousel({
+              loop: true,
+              nav: false,
+              dots: true,
+              autoplay: true,
+              autoplayTimeout: 3500,
+              smartSpeed: 600,
+              autoplayHoverPause: true,
+              // animateIn: 'slideInDown',
+              // animateOut: 'slideOutDown',
+              responsive: {
+                  0: {
+                      items: 1
+                  },
+                  600: {
+                      items: 1
+                  },
+                  1000: {
+                      items: 1
+                  }
+              }
+          });
+      
+          $('.owl-products').owlCarousel({
+              loop: true,
+              nav: true,
+              dots: false,
+              autoplay: true,
+              autoplayTimeout: 3500,
+              autoplayHoverPause: true,
+              responsive: {
+                  0: {
+                      items: 1
+                  },
+                  600: {
+                      items: 3
+                  },
+                  1000: {
+                      items: 6
+                  }
+              }
+          });
+      });
+    </script>
+    <script src="js/jquery.elevateZoom-3.0.8.min.js"></script>
+    <script type="text/javascript">
+      const galery = $("#img_01");
+      
+      galery.elevateZoom({
+          zoomType: 'inner',
+          gallery: 'self-gallery',
+          cursor: 'crosshair',
+          galleryActiveClass: 'active',
+          imageCrossfade: true,
+          loadingIcon: 'http://www.elevateweb.co.uk/spinner.gif'
+      });
+      
+      galery.bind("click", function (e) {
+          let ez = $('#img_01').data('elevateZoom');
+          $.fancybox(ez.getGalleryList());
+          return false;
+      });
+    </script>
   </body>
 </html>
