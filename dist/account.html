@@ -17,41 +17,68 @@
           <div class="header__data">
             <nav class="main-menu">
               <ul>
-                <li><a href="search.php">Buscar</a></li>
+                <li><a href="search.html">Buscar</a></li>
                 <li>/</li>
-                <li><a href="help.php">Ayuda</a></li>
+                <li><a href="help.html">Ayuda</a></li>
               </ul>
             </nav>
           </div>
           <div class="header__data">
             <nav class="main-menu">
               <ul>
-                <li><a href="login.php">Ingresar</a></li>
-                <li><a href="checkout.php">Mi carrito</a></li>
+                <li><a href="login.html">Ingresar</a></li>
+                <li><a href="checkout.html">Mi carrito</a></li>
               </ul>
             </nav>
           </div>
         </div>
         <div class="row-two">
-          <div class="header__img nd-container"><a href="index.php"><img class="logo" src="https://www.pngarts.com/files/1/Netflix-Logo-Free-PNG-Image.png"></a></div>
+          <div class="header__img nd-container"><a href="index.html"><img class="logo" src="http://webparabodas.mx/wp-content/uploads/2015/02/web-para-bodas-blanco.png"></a></div>
         </div>
         <div class="row-three">
           <div class="header__data nd-container">
             <nav class="main-menu">
               <ul>
-                <li><a href="index.php">Inicio</a></li>
-                <li><a href="profile.php">Perfil</a></li>
-                <li><a href="shop.php">Tienda</a></li>
-                <li><a href="designs.php">Diseños</a></li>
-                <li><a href="designers.php">Diseñadores</a></li>
-                <li><a href="blog.php">Blog</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="profile.html">Perfil</a></li>
+                <li><a href="shop.html">Tienda</a></li>
+                <li><a href="designs.html">Diseños</a></li>
+                <li><a href="designers.html">Diseñadores</a></li>
+                <li><a href="blog.html">Blog</a></li>
               </ul>
             </nav>
           </div>
         </div>
       </div>
     </header>
-    <main class="nd-container">
+    <main class="nd-container unset">
+      <div class="main-container">
+        <section>
+          <h1>Registrar producto</h1>
+          <form class="main-form" action="register.html" method="get">
+            <label>
+              <input name="model" placeholder="Nombre" required>
+            </label>
+            <!--label: input(name="image" value="Buscar" type="file" required)-->
+            <label>
+              <input name="price" type="number" placeholder="Precio" required>
+            </label>
+            <label>
+              <input name="description" placeholder="Descripción" required>
+            </label>
+            <label>
+              <input name="stock" type="number" placeholder="Stock" required>
+            </label>
+            <label>
+              <input name="brand" placeholder="Marca" required>
+            </label>
+            <div class="two-items">
+              <button class="button--ghost" type="submit">Registrar</button>
+              <button class="button--ghost" type="reset">Cancelar</button>
+            </div>
+          </form>
+        </section>
+      </div>
     </main>
     <footer class="main-footer">
       <div class="footer-container">

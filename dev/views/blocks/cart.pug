@@ -13,7 +13,7 @@ mixin cart(min, max)
         while row < max
           tr.productitm
             td: img.thumb(src="//picsum.photos/100/100/?image=" + row)
-            td: input.qtyinput(type="number" name="quantity" min="1")
+            td: input.qtyinput(type="number" value="1" name="quantity" min="1")
             td Product name
             td S/79.00
             td: a.remove(href="#") Remover

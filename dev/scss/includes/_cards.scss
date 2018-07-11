@@ -2,14 +2,28 @@
   margin-bottom: 25px;
 }
 
+.card-container:hover img {
+  transform: scale(1.1) rotate(2.5deg);
+}
+
 .card-container.no-margin {
   margin: 0;
 }
 
+.card__img {
+  overflow: hidden;
+}
+
 .card__img img {
-  max-width: 100%;
+  width: 100%;
+  height: 400px;
+  transition: all .4s ease;
   display: block;
   object-fit: cover;
+}
+
+.card__img.alter img {
+  height: 650px;
 }
 
 .card__data h3 {

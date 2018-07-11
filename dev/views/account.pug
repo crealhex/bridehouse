@@ -1,1 +1,16 @@
 extends templates/template
+
+block main
+  .main-container
+    section
+      h1 Registrar producto
+      form.main-form(action="register" + fileSuffix method="get")
+        label: input(name="model" placeholder="Nombre" required)
+        //label: input(name="image" value="Buscar" type="file" required)
+        label: input(name="price" type="number" placeholder="Precio" required)
+        label: input(name="description" placeholder="Descripción" required)
+        label: input(name="stock" type="number" placeholder="Stock" required)
+        label: input(name="brand" placeholder="Marca" required)
+        .two-items
+          button.button--ghost(type="submit") Registrar
+          button.button--ghost(type="reset") Cancelar

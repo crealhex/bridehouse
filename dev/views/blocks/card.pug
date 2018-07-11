@@ -1,6 +1,6 @@
 mixin card(img_num, witdh, height, data, model, price, brand)
   article.card-container&attributes(attributes)
-    .card__img
+    .card__img&attributes(attributes)
       a(href=fileName[4] + fileSuffix)
         img(src="//picsum.photos/" + witdh + "/" + height + "/?image=" + img_num)
     if data

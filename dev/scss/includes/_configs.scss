@@ -46,6 +46,11 @@ a {
 .nd-container {
   max-width: 1344px;
   margin: 0 auto;
+  width: 100%;
+}
+
+.nd-container.unset {
+  width: unset;
 }
 
 .main-container {

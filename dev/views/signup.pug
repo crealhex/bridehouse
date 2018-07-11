@@ -10,7 +10,7 @@ block main
       form.main-form(action="account" + fileSuffix method="get")
         label: input(name="name" placeholder="Nombre" required)
         label: input(name="direction" placeholder="Dirección" required)
-        label: input(name="phone" type="number" placeholder="Teléfono" required)
+        label: input(name="phone" type="number" min="1" placeholder="Teléfono" required)
         label: input(name="email" type="email" placeholder="Correo electrónico" required)
         label: input(name="password" type="password" placeholder="Contraseña" required)
         .two-items

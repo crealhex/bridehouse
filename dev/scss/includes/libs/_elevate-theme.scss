@@ -1,16 +1,18 @@
-#self-gallery {
-  //display: flex;
-  //justify-content: center;
-}
-
 /*set a border on the images to prevent shifting*/
-#self-gallery img{
+#self-gallery img {
   margin-top: 5px;
   border: 2px solid transparent;
-  //display: block;
 }
 
 /*Change the colour*/
 #self-gallery .active img {
   border: 2px solid #333 !important;
+}
+
+.thumb-gallery {
+  margin-right: 5px;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  background-color: #ddd;
 }

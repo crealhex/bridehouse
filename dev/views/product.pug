@@ -1,20 +1,21 @@
 extends templates/template
 append config
   -aside = true
+  -postClass = ''
 
 block main
-  .main-container.col-100
+  .main-container
     section.d-flex
-      .self.col-one.col-50
+      .self.col-one
         .self__img
-          img#img_01(src="//picsum.photos/672/604/?image=74" data-zoom-image="//picsum.photos/2000/2000/?image=74")
+          img#img_01(src="//picsum.photos/600/800/?image=74" data-zoom-image="//picsum.photos/2000/2000/?image=74")
         #self-gallery
           -var selfie = 74
           while selfie < 79
-            a(href="#" data-image="//picsum.photos/672/604/?image=" + selfie data-zoom-image="//picsum.photos/2000/2000/?image=" + selfie)
-              img(src="//picsum.photos/100/100/?image=" + selfie)
+            a(href="#" data-image="//picsum.photos/600/800/?image=" + selfie data-zoom-image="//picsum.photos/2000/2000/?image=" + selfie)
+              img.thumb-gallery(src="//picsum.photos/250/170/?image=" + selfie)
             -selfie++
-      .self.col-two.col-50
+      .self.col-two.col-100
         h1 Product name
         p.price S/399
         form(action=fileName[2] + fileSuffix method="get")
@@ -34,7 +35,7 @@ block main
           button.button--ghost(type="submit") Agregar al carrito
         .details
           p Detalles del producto
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dolores, doloribus ducimus ea error eum ex hic in magni minus, mollitia nemo placeat quae recusandae totam veritatis voluptatibus! Dolorem, optio! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aspernatur doloribus dolorum, eius, eligendi enim hic incidunt itaque labore minus, molestias quae quam quidem sed tempora tempore vero. Magni, veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet consequuntur cum cupiditate delectus dolore dolorum esse eveniet incidunt labore, natus perferendis provident quas recusandae saepe sed sequi unde ut veniam? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias asperiores consectetur corporis debitis dicta dolores in laborum magnam soluta, voluptatibus.
+          p A little description of this product.
 
 block aside
   .aside-container

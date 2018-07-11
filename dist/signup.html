@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
-    <main class="nd-container">
+    <main class="nd-container unset">
       <div class="main-container col-100">
         <section>
           <h2>Registrarse</h2>
-          <form class="main-form" action="account.php" method="get">
+          <form class="main-form" action="account.html" method="get">
             <label>
               <input name="name" placeholder="Nombre" required>
             </label>
@@ -23,7 +23,7 @@
               <input name="direction" placeholder="Dirección" required>
             </label>
             <label>
-              <input name="phone" type="number" placeholder="Teléfono" required>
+              <input name="phone" type="number" min="1" placeholder="Teléfono" required>
             </label>
             <label>
               <input name="email" type="email" placeholder="Correo electrónico" required>
@@ -32,9 +32,9 @@
               <input name="password" type="password" placeholder="Contraseña" required>
             </label>
             <div class="two-items">
-              <button class="button--ghost" type="submit">Ingresar</button><a class="button--ghost" href="index.php">Cancelar</a>
+              <button class="button--ghost" type="submit">Ingresar</button><a class="button--ghost" href="index.html">Cancelar</a>
             </div>
-            <p>¿Ya tienes una cuenta? Inicia sesión<a href="login.php">
+            <p>¿Ya tienes una cuenta? Inicia sesión<a href="login.html">
                 <u> aquí</u></a></p>
           </form>
         </section>

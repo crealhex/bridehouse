@@ -7,14 +7,14 @@
   display: flex;
 }
 
-.nd-container section h2,
-.nd-container section h1 {
+.nd-container h2,
+.nd-container h1 {
   text-align: center;
   text-transform: uppercase;
 }
 
-.nd-container section h2::after,
-.nd-container section h1::after {
+.nd-container h2::after,
+.nd-container h1::after {
   content: '';
   margin-top: 15px;
   margin-left: auto;
@@ -33,6 +33,14 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
+.gallery img {
+  height: 100% !important;
+}
+
 .gallery article:first-child {
   grid-row: 1 / span 2;
+}
+
+.gallery article:first-child img {
+  height: 100%;
 }

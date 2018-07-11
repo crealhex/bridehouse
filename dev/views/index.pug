@@ -4,7 +4,7 @@ append config
   -aside = true
 
 block main
-  .main-container.col-100
+  .main-container
     section
       h2 Productos más recientes
       .products.d-grid
@@ -12,7 +12,7 @@ block main
           include blocks/card
           -var card = 324
           while card < 330
-            +card(card, 500, 500, true, 'Product model', 321, 'Product brand')
+            +card(card, 500, 600, true, 'Product model', 321, 'Product brand')
             -card++
 
 block aside
@@ -24,5 +24,5 @@ block aside
           include blocks/card
           -var card = 215
           while card < 218
-            +card(card, 500, 650, true, 'Product model', 512)
+            +card(card, 500, 650, true, 'Product model', 512)(class="alter")
             -card++
